@@ -5,7 +5,7 @@ import * as middy from 'middy'
 import { cors } from 'middy/middlewares'
 import * as AWS  from 'aws-sdk'
 
-//import { getTodosForUser as getTodosForUser } from '../../businessLogic/todos'
+// import { getTodosForUser as getTodosForUser } from '../../businessLogic/todos'
 import { getUserId } from '../utils';
 
 const todosTable = process.env.TODOS_TABLE
