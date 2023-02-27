@@ -12,6 +12,12 @@ import * as createError from 'http-errors'
 const logger = createLogger("CreateTodo")
 const attachmentUtils = new AttachmentUtils();
 const todosAcess = new TodosAccess();
+
+export async function getTodosForUser(userId: string): Promise<TodoItem[]>{
+
+    return todosAcess.getAllTodos(userId);
+}
+
 export async function createTodo(
     newTodo: CreateTodoRequest,
     userId: string

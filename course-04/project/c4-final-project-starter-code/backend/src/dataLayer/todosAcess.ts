@@ -15,7 +15,7 @@ export class TodosAccess {
     constructor(
         private readonly docClient : DocumentClient = new AWS.DynamoDB.DocumentClient(),
         private readonly todoTable = process.env.TODOS_TABLE,
-        private readonly todoIndex = process.env.INDEX_NAME
+        private readonly todoIndex = process.env.TODOS_CREATED_AT_INDEX
     ){}
 
     async createTodoItem(todoItem: TodoItem): Promise<TodoItem> {
